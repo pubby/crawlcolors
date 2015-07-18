@@ -68,7 +68,8 @@ $(document).ready(function() {
     $('#chat_history').on('DOMNodeInserted', function(e) {
         if($(e.target).is('.chat_sender'))
             update($(e.target));
-        $('#chat_history').scrollTop($('#chat_history')[0].scrollHeight);
+        document.getElementById("chat_history_container").scrollTop
+            = 100000000;
     });
     $('#spectator_list').on('DOMNodeInserted', function(e) {
         if($(e.target).is('.player') || $(e.target).is('.watcher'))
