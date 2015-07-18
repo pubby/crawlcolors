@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "Crawl Chat Colors Program",
+  "description": "Test",
+  "version": "1.0",
+
+  "content_scripts": [
+   {
+      "matches": ["http://crawl.s-z.org/*"],
+      "js": ["jquery.js", "bot.js"]
+   }
+  ]
+}
