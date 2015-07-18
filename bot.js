@@ -52,7 +52,6 @@ function nameToHex(name) {
     var hue = (hash % 100) / 100;
     var sat = 0.45 + ((hash / 100) % 100) / 200;
     var val = 0.45 + ((hash / 10000) % 100) / 200;
-    console.log(hue, ' ', sat, ' ', val);
     var rgb = HSVtoRGB(hue, sat, val);
     return rgbToHex(rgb);
 }
@@ -61,7 +60,6 @@ $(document).ready(function() {
     function update(c) {
         var name = c.text();
         var hex = nameToHex(name);
-        console.log(hex);
         c.css("color", hex);
     }
 
