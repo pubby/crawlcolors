@@ -57,6 +57,8 @@ function nameToHex(name) {
 }
 
 $(document).ready(function() {
+    console.log("CCCP loaded");
+
     function update(c) {
         var name = c.text();
         var hex = nameToHex(name);
@@ -66,6 +68,7 @@ $(document).ready(function() {
     $('#chat_history').on('DOMNodeInserted', function(e) {
         if($(e.target).is('.chat_sender'))
             update($(e.target));
+        $('#chat_history').scrollTop($('#chat_history')[0].scrollHeight);
     });
     $('#spectator_list').on('DOMNodeInserted', function(e) {
         if($(e.target).is('.player') || $(e.target).is('.watcher'))
